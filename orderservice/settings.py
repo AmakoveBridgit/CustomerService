@@ -103,8 +103,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 
-# atsk_e5670433fe5eae92b728446fd26d45064117742c94e494943e600246d0cc8ee32c828eeb
-# Configure Africa's Talking SDK
+
 
 
 AFRICAS_TALKING_USERNAME = 'sandbox'  

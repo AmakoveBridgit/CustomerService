@@ -1,0 +1,9 @@
+# gitignore
+
+.env
+
+__pycache__/
+env/
+dbsqlite3
+.cache
+*.sqlite3

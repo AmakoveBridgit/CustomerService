@@ -31,11 +31,10 @@ class CustomerAPITestCase(TestCase):
 
     def test_update_customer(self):
         url = reverse('customer-detail', kwargs={'pk': self.customer.id})
-        updated_data = {'name': 'Jane ', 'phonenumber': '0716588562', 'code': '002'}
+        updated_data = {'name': 'Bridgit ', 'phonenumber': '0716588562', 'code': '002'}
         response = self.client.put(url, updated_data, format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.customer.refresh_from_db()
-        self.assertEqual(self.customer.name, 'Jane ')
+        self.assertEqual(self.customer.name, 'Bridgit')
 
     def test_delete_customer(self):
         url = reverse('customer-detail', kwargs={'pk': self.customer.id})
@@ -48,7 +47,7 @@ class OrderAPITestCase(TestCase):
         self.client = APIClient()
         self.customer = Customer.objects.create(name='James', phonenumber='0716588562', code='001')
         self.order_data = {'customer': self.customer.id, 'item': 'Phone', 'amount': 99.99}
-        self.order = Order.objects.create(customer=self.customer, item='Product A', amount=99.99)
+        self.order = Order.objects.create(customer=self.customer, item='Laptop', amount=99.99)
         self.order_url = reverse('order-list-create')
 
     def test_create_order(self):
