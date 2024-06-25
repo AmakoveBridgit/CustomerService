@@ -5,8 +5,10 @@ and SMS notifications using Africa’s Talking SMS gateway.
 
 `Steps`
 
-git clone: https://github.com/AmakoveBridgit/CustomerService.git
+git clone https://github.com/AmakoveBridgit/CustomerService.git
+
 cd CustomerOrdersService
+
 cd orderservice
 
 `Set up virtual environment`
@@ -25,6 +27,10 @@ python3 manage.py migrate
 `Runserver`
 
 python3 manage.py runserver
+
+`Hosted link`
+
+https://customerservice-5.onrender.com
 
 
 
